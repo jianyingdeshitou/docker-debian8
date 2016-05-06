@@ -1,0 +1,6 @@
+#!/bin/sh
+source ~/aliases/bash.aliases
+source ~/aliases/linux.aliases
+source ~/aliases/short.aliases
+
+source ~/aliases/git.aliases
