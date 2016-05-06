@@ -1,2 +1,2 @@
-#!/bin/bash
-docker rmi debian8-oz debian8-oz:20160219
+#!/bin/sh
+docker rmi debian8-oz debian8-oz:`date +%Y%m%d`

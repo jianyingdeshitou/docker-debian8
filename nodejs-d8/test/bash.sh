@@ -1,2 +1,2 @@
 #!/bin/sh
-docker exec -it nodejs-test  /bin/bash
+docker run --rm -it nodejs-d8 /bin/bash
