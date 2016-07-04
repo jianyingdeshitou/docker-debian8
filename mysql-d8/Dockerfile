@@ -10,11 +10,11 @@ RUN { \
 # 安装
 RUN apt-get update && apt-get install mysql-server -y
 # [fix] 删除默认的 innodb 相关文件
-RUN rm /var/lib/mysql/ib*
+#RUN rm /var/lib/mysql/ib*
 
-VOLUME /var/lib/mysql
+#VOLUME /var/lib/mysql
 
-EXPOSE 3306
+#EXPOSE 3306
 
-CMD ["mysqld"]
+#CMD ["mysqld"]
 
