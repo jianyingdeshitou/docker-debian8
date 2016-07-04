@@ -1,0 +1,58 @@
+@startuml
+header
+debian8 镜像继承图
+endheader
+
+"debian8-oz" <|-- debian8
+
+package "LAMP" {
+debian8 <|-- "apache2-d8"
+"apache2-d8" <|-- "php5-apache2-d8"
+"php5-apache2-d8" <|-- "lamp-d8"
+}
+
+package "Database" {
+debian8 <|-- "mongodb-d8"
+debian8 <|-- "mysql-d8"
+debian8 <|-- "redis-d8"
+}
+
+package "Application" {
+debian8 <|-- "docker-d8"
+debian8 <|-- "nodejs-d8"
+debian8 <|-- "supervisor-d8"
+}
+
+package "LNMP" {
+debian8 <|-- "nginx-d8"
+}
+
+class apache2-d8{
++apache2_port_80
++apache2()
+}
+
+class php5-apache2-d8{
++apache2_port_80
++apache2()
+}
+
+class lamp-d8{
++apache2_port_80
++mysql_port_3306
++apache2()
++msyql()
+}
+
+class mysql-d8{
++mysql_port_3306
++msyql()
+}
+
+class nginx-d8{
++nginx_port_80
++nginx_port_443
++nginx()
+}
+
+@enduml

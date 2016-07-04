@@ -1,2 +1,2 @@
 #!/bin/sh
-docker run --name mysql-test -d mysql-d8 
+docker run --name mysql-test -d mysql-d8 mysqld_safe

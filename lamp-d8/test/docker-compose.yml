@@ -1,0 +1,9 @@
+web:
+    image: lamp-d8
+    command: /cmd/start.sh
+    ports: 
+        - '8888:80'
+    volumes: 
+        - './cmd:/cmd'
+        - './app:/var/www/html'
+    
