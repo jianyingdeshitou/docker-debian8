@@ -1,0 +1,8 @@
+web:
+    image: dev-php5-apache2-d8
+    command: /cmd/phpcs.sh
+    volumes:
+        - './cmd:/cmd'
+        - './app:/var/www/html'
+        - './test:/test'
+        - './report:/report'
