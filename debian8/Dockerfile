@@ -13,7 +13,3 @@ RUN ln -sf /usr/share/zoneinfo/Asia/Shanghai /etc/localtime
 # 更新
 RUN apt-get update && apt-get upgrade -y
 
-RUN apt-get update && apt-get install curl git git-flow -y
-
-ENV LANG=zh_CN.UTF8
-RUN echo zh_CN.UTF-8 UTF-8 >> /etc/locale.gen && locale-gen
