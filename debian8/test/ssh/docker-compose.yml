@@ -1,0 +1,8 @@
+ssh:
+    image: debian8
+    command: /cmd/start.sh
+    ports:
+        - '8002:22'
+    volumes:
+        - './cmd:/cmd'
+
