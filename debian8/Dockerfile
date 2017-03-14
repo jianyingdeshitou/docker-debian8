@@ -11,5 +11,12 @@ COPY files/etc/apt/sources.list.jessie /etc/apt/sources.list
 # 设置时区
 RUN ln -sf /usr/share/zoneinfo/Asia/Shanghai /etc/localtime
 # 更新
-RUN apt-get update && apt-get upgrade -y
+RUN apt-get update && apt-get upgrade -y && \
+      apt-get install -y build-essential && \
+      apt-get install -y software-properties-common && \
+      apt-get install -y curl git && \
+      rm -rf /var/lib/apt/lists/*
+
+ENV LANG=zh_CN.UTF8
+RUN echo zh_CN.UTF-8 UTF-8 >> /etc/locale.gen && locale-gen
 
