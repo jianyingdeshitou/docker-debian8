@@ -9,3 +9,14 @@ RUN apt-get update && \
 RUN pear install PHP_CodeSniffer
 RUN pear install PHP_UML
 
+ARG PUID=1000
+ARG PGID=1000
+RUN groupadd -g $PGID debian && \
+    useradd -u $PUID -g debian -m debian
+
+USER debian
+
+
+
+
+
