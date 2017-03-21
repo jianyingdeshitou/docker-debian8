@@ -15,5 +15,5 @@ ENV APACHE_RUN_DIR /var/run/apache2
 ENV APACHE_LOCK_DIR /var/lock/apache2
 
 RUN mkdir -p $APACHE_RUN_DIR $APACHE_LOCK_DIR $APACHE_LOG_DIR
-# RUN mkdir -p /app && rm -fr /var/www/html && ln -s /app /var/www/html
+RUN mkdir -p /app && rm -fr /var/www/html && ln -s /app /var/www/html
 
