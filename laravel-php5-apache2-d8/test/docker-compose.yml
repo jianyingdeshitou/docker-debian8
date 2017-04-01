@@ -1,0 +1,19 @@
+version: '2'
+
+services:
+    web:
+        image: php5-apache2-d8
+        command: /cmd/start-web.sh
+        ports:
+            - '80:80'
+        volumes:
+            - './app:/app'
+            - './cmd:/cmd'
+
+    dev:
+        image: laravel-php5-apache2-d8
+        command: /cmd/start-dev.sh
+        volumes:
+            - './app:/app'
+            - './cmd:/cmd'
+
