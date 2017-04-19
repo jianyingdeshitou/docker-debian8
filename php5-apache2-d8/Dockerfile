@@ -11,5 +11,6 @@ ENV COMPOSER_ALLOW_SUPERUSER 1
 ENV COMPOSER_HOME /composer
 
 RUN curl -sS https://getcomposer.org/installer | php \
-    && mv composer.phar /usr/local/bin/composer \
+    && mv composer.phar /usr/local/bin/composer 
+RUN composer config -g repo.packagist composer https://packagist.phpcomposer.com
 
