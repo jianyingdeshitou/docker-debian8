@@ -6,7 +6,9 @@ ENV TERM xterm
 ENV DEBIAN_FRONTEND noninteractive
 
 # 切换 163 源 (stable list)
-COPY files/sources.list /etc/apt/sources.list
+# COPY files/sources.list /etc/apt/sources.list
+RUN rm /etc/apt/sources.list \ 
+        && wget -O /etc/apt/sources.list http://mirrors.163.com/.help/sources.list.jessie
 
 # 设置时区
 RUN ln -sf /usr/share/zoneinfo/Asia/Shanghai /etc/localtime
